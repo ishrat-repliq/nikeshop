@@ -4,6 +4,7 @@ import { headerLogo } from "../assets/images";
 import { navLinks } from "../constants";
 import Link from "next/link";
 import SearchBar from "./search-bar";
+import { Cart } from "./Cart";
 
 const Nav = () => {
   return (
@@ -38,7 +39,8 @@ const Nav = () => {
         <div className='flex gap-2 text-lg leading-normal font-medium font-montserrat max-lg:hidden wide:mr-24'>
           <Link href='/auth'>Sign in</Link>
           <span>/</span>
-          <Link href='/'>Cart</Link>
+          {/* <Link href='/'>Cart</Link> */}
+          <Cart/>
         </div>
         <div className='hidden max-lg:block'>
           <Image src={hamburger} alt='hamburger icon' width={25} height={25} />

@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "./components";
 import { Footer } from "./sections";
+import { Providers } from "./provider/provider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +27,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Nav/>
-        <section>
-        {children}
-        </section>
+       
         
+        <Providers>
+        <Nav/>
+        {children}
+        </Providers>
         <section className=' bg-black padding-x padding-t pb-8'>
         <Footer />
       </section>

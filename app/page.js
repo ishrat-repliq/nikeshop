@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Nav } from "./components";
 import { CustomerReviews, Footer, Hero, PopularProducts, Services, SpecialOffer, Subscribe, SuperQuality } from "./sections";
+import { ProductList } from "./components/ProductList";
+import { Cart } from "./components/Cart";
 
 export default function Home() {
   return (
@@ -32,6 +34,10 @@ export default function Home() {
         <Footer />
       </section> */}
     </main>
+  //   <div>
+  //   <ProductList />
+  //   <Cart />
+  // </div>
 
      
   
