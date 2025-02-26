@@ -3,6 +3,8 @@ import "./globals.css";
 import { Nav } from "./components";
 import { Footer } from "./sections";
 import { Providers } from "./provider/provider";
+import { StoreProvider } from "./store/StoreProvider";
+
 
 
 const geistSans = Geist({
@@ -28,11 +30,17 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
        
-        
+         <StoreProvider>
         <Providers>
-        <Nav/>
-        {children}
+          <section className='relative'>
+          <Nav/>
+          </section>
+       
+        <section >     
+          {children}
+        </section>
         </Providers>
+        </StoreProvider>
         <section className=' bg-black padding-x padding-t pb-8'>
         <Footer />
       </section>

@@ -2,10 +2,10 @@ import Image from "next/image";
 import { star } from "../assets/icons";
 import { Button } from ".";
 
-const PopularProductCard = ({ imgURL, name, price }) => {
+const PopularProductCard = ({ imgURL, name, price,ref }) => {
   return (
-    <div className='flex flex-1 flex-col w-full max-sm:w-full'>
-      <Image src={imgURL} alt={name} className='w-[282px] h-[282px]' />
+    <div ref={ref} className='flex flex-1 flex-col w-full max-sm:w-full'>
+      <Image src={imgURL} alt={name} width={282} height={282} />
       <div className='mt-8 flex justify-start gap-2.5'>
         <Image src={star} alt='rating icon' width={24} height={24} />
         <p className='font-montserrat text-xl leading-normal text-slate-gray'>
